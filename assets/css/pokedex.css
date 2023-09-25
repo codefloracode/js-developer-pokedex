@@ -10,72 +10,144 @@
     background-color: #a6a877;
 }
 
+.normal .details {
+    color: #a6a877;
+}
+
 .grass {
     background-color: #77c850;
+}
+
+.grass .details {
+    color: #77c850;
 }
 
 .fire {
     background-color: #ee7f30;
 }
 
+.fire .details {
+    color: #ee7f30;
+}
+
 .water {
     background-color: #678fee;
+}
+
+.water .details {
+    color: #678fee;
 }
 
 .electric {
     background-color: #f7cf2e;
 }
 
+.electric .details {
+    color: #f7cf2e;
+}
+
 .ice {
     background-color: #98d5d7;
+}
+
+.ice .details {
+    color: #98d5d7;
 }
 
 .ground {
     background-color: #dfbf69;
 }
 
+.ground .details {
+    color: #dfbf69;
+}
+
 .flying {
     background-color: #a98ff0;
+}
+
+.flying .details {
+    color: #a98ff0;
 }
 
 .poison {
     background-color: #a040a0;
 }
 
+.poison .details {
+    color: #a040a0;
+}
+
 .fighting {
     background-color: #bf3029;
+}
+
+.fighting .details {
+    color: #bf3029;
 }
 
 .psychic {
     background-color: #f65687;
 }
 
+.psychic .details {
+    color: #f65687;
+}
+
 .dark {
     background-color: #725847;
+}
+
+.dark .details {
+    color: #725847;
 }
 
 .rock {
     background-color: #b8a137;
 }
 
+.rock .details {
+    color: #b8a137;
+}
+
 .bug {
     background-color: #a8b720;
+}
+
+.bug .details {
+    color: #a8b720;
 }
 
 .ghost {
     background-color: #6e5896;
 }
 
+.ghost .details {
+    color: #6e5896;
+}
+
 .steel {
     background-color: #b9b7cf;
+}
+
+.steel .details {
+    color: #b9b7cf;
 }
 
 .dragon {
     background-color: #6f38f6;
 }
 
+.dragon .details {
+    color: #6f38f6;
+}
+
 .fairy {
     background-color: #f9aec7;
+}
+
+.fairy .details {
+    color: #f9aec7;
 }
 
 .pokemon {
@@ -124,7 +196,7 @@
 
 .pokemon .detail img {
     max-width: 100%;
-    height: 70px;
+    height: 80px;
 }
 
 .pagination {
@@ -144,8 +216,45 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
+.details {
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: .25rem .25rem 1rem 1rem;
+    padding: 0;
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .3s, padding .3s, opacity .5s;
+}
+
+.pokemon.open .details {
+    max-height: 300px;
+    padding: 1rem;
+    opacity: 1;
+}
+
+.details div {
+    width: calc(50% - 20px);
+    margin-right: 10px;
+}
+
+.details p {
+    margin: 0;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+ 
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
